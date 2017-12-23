@@ -12,6 +12,7 @@
 		4389AC311FEE2334006C53AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4389AC2F1FEE2334006C53AC /* Main.storyboard */; };
 		4389AC331FEE2334006C53AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4389AC321FEE2334006C53AC /* Assets.xcassets */; };
 		4389AC361FEE2334006C53AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4389AC341FEE2334006C53AC /* LaunchScreen.storyboard */; };
+		E329A6C3FCA86F4514BD6B91 /* Pods_RidesShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4389AC321FEE2334006C53AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4389AC351FEE2334006C53AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4389AC371FEE2334006C53AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D064CA7A1BF47DDEF445B47 /* Pods-RidesShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidesShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidesShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD62FF4C817C98D76A55BCCE /* Pods-RidesShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidesShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E329A6C3FCA86F4514BD6B91 /* Pods_RidesShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183244DC78C3238CE53B3A2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D064CA7A1BF47DDEF445B47 /* Pods-RidesShare.debug.xcconfig */,
+				DD62FF4C817C98D76A55BCCE /* Pods-RidesShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4389AC1F1FEE2333006C53AC = {
 			isa = PBXGroup;
 			children = (
 				4389AC2A1FEE2334006C53AC /* RidesShare */,
 				4389AC291FEE2334006C53AC /* Products */,
+				183244DC78C3238CE53B3A2D /* Pods */,
+				87AF79D86BE324521BB8D96D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = RidesShare;
 			sourceTree = "<group>";
 		};
+		87AF79D86BE324521BB8D96D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4389AC3A1FEE2334006C53AC /* Build configuration list for PBXNativeTarget "RidesShare" */;
 			buildPhases = (
+				40FAB66D8B63E769CE5250F9 /* [CP] Check Pods Manifest.lock */,
 				4389AC241FEE2334006C53AC /* Sources */,
 				4389AC251FEE2334006C53AC /* Frameworks */,
 				4389AC261FEE2334006C53AC /* Resources */,
+				46AD2E58E397ACAAEE811D5A /* [CP] Embed Pods Frameworks */,
+				9D999FA0DC1AF9E7537B54CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40FAB66D8B63E769CE5250F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RidesShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46AD2E58E397ACAAEE811D5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D999FA0DC1AF9E7537B54CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4389AC241FEE2334006C53AC /* Sources */ = {
@@ -272,10 +361,12 @@
 		};
 		4389AC3B1FEE2334006C53AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D064CA7A1BF47DDEF445B47 /* Pods-RidesShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJJ6DUC9EZ;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = RidesShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abouelouafayassine.acty.RidesShare;
@@ -287,10 +378,12 @@
 		};
 		4389AC3C1FEE2334006C53AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD62FF4C817C98D76A55BCCE /* Pods-RidesShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJJ6DUC9EZ;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = RidesShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abouelouafayassine.acty.RidesShare;
