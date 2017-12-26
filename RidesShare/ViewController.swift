@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var actionbutton: RoundshadowanimButton!
+    
+    @IBAction func actionbuttonpressed(_ sender: Any) {
+        actionbutton.animateButton(shouldLoad: true, withMessage: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

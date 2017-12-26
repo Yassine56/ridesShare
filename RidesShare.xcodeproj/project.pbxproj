@@ -16,6 +16,7 @@
 		4389AC431FF173DB006C53AC /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC421FF173DB006C53AC /* RoundImage.swift */; };
 		4389AC451FF174EB006C53AC /* RoundShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC441FF174EB006C53AC /* RoundShadow.swift */; };
 		4389AC471FF1768E006C53AC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC461FF1768E006C53AC /* CircleView.swift */; };
+		4389AC491FF2AA2A006C53AC /* RoundshadowanimButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC481FF2AA2A006C53AC /* RoundshadowanimButton.swift */; };
 		E329A6C3FCA86F4514BD6B91 /* Pods_RidesShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		4389AC421FF173DB006C53AC /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		4389AC441FF174EB006C53AC /* RoundShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadow.swift; sourceTree = "<group>"; };
 		4389AC461FF1768E006C53AC /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		4389AC481FF2AA2A006C53AC /* RoundshadowanimButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundshadowanimButton.swift; sourceTree = "<group>"; };
 		6D064CA7A1BF47DDEF445B47 /* Pods-RidesShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidesShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare.debug.xcconfig"; sourceTree = "<group>"; };
 		BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidesShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD62FF4C817C98D76A55BCCE /* Pods-RidesShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidesShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				4389AC421FF173DB006C53AC /* RoundImage.swift */,
 				4389AC441FF174EB006C53AC /* RoundShadow.swift */,
 				4389AC461FF1768E006C53AC /* CircleView.swift */,
+				4389AC481FF2AA2A006C53AC /* RoundshadowanimButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4389AC491FF2AA2A006C53AC /* RoundshadowanimButton.swift in Sources */,
 				4389AC471FF1768E006C53AC /* CircleView.swift in Sources */,
 				4389AC2E1FEE2334006C53AC /* ViewController.swift in Sources */,
 				4389AC451FF174EB006C53AC /* RoundShadow.swift in Sources */,

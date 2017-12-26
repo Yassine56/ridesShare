@@ -57,7 +57,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-photo" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-tg-LqA" customClass="RoundImage" customModule="RidesShare" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-photo2" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-tg-LqA" customClass="RoundImage" customModule="RidesShare" customModuleProvider="target">
                                         <rect key="frame" x="325" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="9mK-G4-FOF"/>
@@ -77,18 +77,33 @@
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9M-Rw-YOW">
-                                <rect key="frame" x="0.0" y="587" width="375" height="60"/>
-                                <color key="backgroundColor" red="0.9688579424565168" green="0.98470653966840205" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA9-vG-X2v">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9M-Rw-YOW" customClass="RoundshadowanimButton" customModule="RidesShare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <color key="backgroundColor" red="0.9688579424565168" green="0.98470653966840205" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="kK1-tb-ALM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
+                                        <state key="normal" title="REQUEST RIDE">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.89403921365737915" green="0.89416795969009399" blue="0.89401096105575562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionbuttonpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ND-4k-XAS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="kK1-tb-ALM"/>
+                                    <constraint firstItem="i9M-Rw-YOW" firstAttribute="top" secondItem="zA9-vG-X2v" secondAttribute="top" id="4tt-8C-Mh5"/>
+                                    <constraint firstAttribute="trailing" secondItem="i9M-Rw-YOW" secondAttribute="trailing" id="DGB-3F-qG1"/>
+                                    <constraint firstItem="i9M-Rw-YOW" firstAttribute="leading" secondItem="zA9-vG-X2v" secondAttribute="leading" id="MC8-rY-Gh4"/>
+                                    <constraint firstAttribute="height" constant="80" id="qBu-RB-hlz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
-                                <state key="normal" title="REQUEST RIDE">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.89403921365737915" green="0.89416795969009399" blue="0.89401096105575562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfD-Cu-aW1" customClass="RoundShadow" customModule="RidesShare" customModuleProvider="target">
                                 <rect key="frame" x="16" y="68" width="343" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,29 +179,29 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="46w-gK-tyU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="0PZ-xU-VDr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i9M-Rw-YOW" secondAttribute="bottom" constant="20" id="BAo-Ue-9Zc"/>
                             <constraint firstItem="Q46-bd-pWS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CjA-EE-gPZ"/>
                             <constraint firstItem="FAy-9r-DcU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cs8-WY-aPC"/>
-                            <constraint firstItem="i9M-Rw-YOW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GGz-1d-tw0"/>
                             <constraint firstItem="46w-gK-tyU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NUz-b4-V5A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OoV-xq-Wqi" secondAttribute="bottom" constant="80" id="QYc-uy-9eZ"/>
                             <constraint firstItem="Q46-bd-pWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vtz-6k-xRp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i9M-Rw-YOW" secondAttribute="trailing" id="XyQ-of-K8S"/>
                             <constraint firstItem="e1E-R7-VkV" firstAttribute="top" secondItem="46w-gK-tyU" secondAttribute="bottom" constant="20" id="aJq-Ka-Hla"/>
+                            <constraint firstItem="zA9-vG-X2v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aTq-1O-ox2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e1E-R7-VkV" secondAttribute="trailing" constant="10" id="ahI-9H-Mx3"/>
+                            <constraint firstItem="zA9-vG-X2v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aoa-1P-bor"/>
                             <constraint firstItem="FAy-9r-DcU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cHd-C6-bOH"/>
-                            <constraint firstItem="i9M-Rw-YOW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gIp-XV-uEu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OoV-xq-Wqi" secondAttribute="trailing" constant="10" id="h2d-0i-GAL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i9M-Rw-YOW" secondAttribute="bottom" constant="20" id="iw9-iz-jGS"/>
                             <constraint firstItem="Q46-bd-pWS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="liD-9l-q9t"/>
-                            <constraint firstItem="i9M-Rw-YOW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m41-si-XJe"/>
                             <constraint firstItem="FAy-9r-DcU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nw3-3q-VfI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="46w-gK-tyU" secondAttribute="trailing" constant="10" id="t9p-MD-x7J"/>
                             <constraint firstItem="e1E-R7-VkV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tgL-mG-BvE"/>
+                            <constraint firstItem="zA9-vG-X2v" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uKz-oL-0eX"/>
                             <constraint firstItem="Q46-bd-pWS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vgG-Lg-Agd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="actionbutton" destination="i9M-Rw-YOW" id="Blt-FB-HdH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +211,6 @@
     <resources>
         <image name="centerMapBtn" width="62" height="62"/>
         <image name="menuSliderBtn" width="30" height="24"/>
-        <image name="sample-photo" width="320" height="320"/>
+        <image name="sample-photo2" width="1242" height="2208"/>
     </resources>
 </document>
