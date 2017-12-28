@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="3" width="30" height="24"/>
                                         <state key="normal" image="menuSliderBtn"/>
                                         <connections>
-                                            <action selector="pressMenuAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5v-zO-NLl"/>
+                                            <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLG-Rm-ADd"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WuC-Cn-yOq">

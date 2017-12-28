@@ -16,9 +16,10 @@ class HomeVC: UIViewController {
     
     
     
-    @IBAction func pressMenuAction(_ sender: Any) {
+    @IBAction func menuButtonPressed(_ sender: Any) {
         delegate?.toggleLeftPanel()
     }
+    
     
     @IBAction func actionbuttonpressed(_ sender: Any) {
         actionbutton.animateButton(shouldLoad: true, withMessage: nil)
