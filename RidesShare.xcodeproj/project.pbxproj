@@ -20,6 +20,7 @@
 		4389AC4B1FF400C0006C53AC /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC4A1FF400C0006C53AC /* LeftSidePanelVC.swift */; };
 		4389AC4D1FF40137006C53AC /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC4C1FF40137006C53AC /* ContainerVC.swift */; };
 		4389AC501FF404E7006C53AC /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC4F1FF404E7006C53AC /* CenterVCDelegate.swift */; };
+		4389AC531FF55E2A006C53AC /* UIViewEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC521FF55E2A006C53AC /* UIViewEXT.swift */; };
 		E329A6C3FCA86F4514BD6B91 /* Pods_RidesShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		4389AC4A1FF400C0006C53AC /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		4389AC4C1FF40137006C53AC /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		4389AC4F1FF404E7006C53AC /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
+		4389AC521FF55E2A006C53AC /* UIViewEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEXT.swift; sourceTree = "<group>"; };
 		6D064CA7A1BF47DDEF445B47 /* Pods-RidesShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidesShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare.debug.xcconfig"; sourceTree = "<group>"; };
 		BD9CE8AD5C316C256CDE1899 /* Pods_RidesShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidesShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD62FF4C817C98D76A55BCCE /* Pods-RidesShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidesShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidesShare/Pods-RidesShare.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		4389AC2A1FEE2334006C53AC /* RidesShare */ = {
 			isa = PBXGroup;
 			children = (
+				4389AC511FF55E15006C53AC /* Extension */,
 				4389AC4E1FF404CA006C53AC /* Protocols */,
 				4389AC3F1FEEC2BD006C53AC /* Model */,
 				4389AC3E1FEEC2B9006C53AC /* View */,
@@ -134,6 +137,14 @@
 				4389AC4F1FF404E7006C53AC /* CenterVCDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4389AC511FF55E15006C53AC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4389AC521FF55E2A006C53AC /* UIViewEXT.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		87AF79D86BE324521BB8D96D /* Frameworks */ = {
@@ -290,6 +301,7 @@
 				4389AC451FF174EB006C53AC /* RoundShadow.swift in Sources */,
 				4389AC2C1FEE2334006C53AC /* AppDelegate.swift in Sources */,
 				4389AC431FF173DB006C53AC /* RoundImage.swift in Sources */,
+				4389AC531FF55E2A006C53AC /* UIViewEXT.swift in Sources */,
 				4389AC411FEEC318006C53AC /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

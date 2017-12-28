@@ -27,7 +27,12 @@ class ContainerVC: UIViewController {
     var centerController : UIViewController!
     var ishidden = false // for the status bar
     var centerPannelExpandedOffSet : CGFloat = 160
-    var currentState: SlideOutState = .collapsed
+    var currentState: SlideOutState = .collapsed {
+        didSet {
+            let shouldShowShadow = (currentState != .collapsed)
+           shouldShowShadowForCenterViewController(status: shouldShowShadow )
+        }
+    }
     var homeVC: HomeVC!
     var leftVC: LeftSidePanelVC!
     var tap: UITapGestureRecognizer!
@@ -150,6 +155,13 @@ extension ContainerVC:CenterVCdelegate {
         
         
         
+    }
+    func shouldShowShadowForCenterViewController(status: Bool){
+        if status == true {
+            leftVC.view.layer.shadowOpacity = 0.6
+        }else {
+            leftVC.view.layer.shadowOpacity = 0.0
+        }
     }
 }
 
