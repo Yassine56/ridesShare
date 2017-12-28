@@ -8,9 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController {
 
     @IBOutlet var actionbutton: RoundshadowanimButton!
+    var delegate: CenterVCdelegate?
+    
+    
+    
+    
+    @IBAction func pressMenuAction(_ sender: Any) {
+        delegate?.toggleLeftPanel()
+    }
     
     @IBAction func actionbuttonpressed(_ sender: Any) {
         actionbutton.animateButton(shouldLoad: true, withMessage: nil)
