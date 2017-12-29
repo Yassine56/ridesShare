@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435FAE6F1FF69C8E009241CF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435FAE6E1FF69C8E009241CF /* LoginVC.swift */; };
+		435FAE711FF6A1FB009241CF /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435FAE701FF6A1FB009241CF /* RoundedCornerTextField.swift */; };
 		4389AC2C1FEE2334006C53AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC2B1FEE2334006C53AC /* AppDelegate.swift */; };
 		4389AC2E1FEE2334006C53AC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4389AC2D1FEE2334006C53AC /* HomeVC.swift */; };
 		4389AC311FEE2334006C53AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4389AC2F1FEE2334006C53AC /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		435FAE6E1FF69C8E009241CF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		435FAE701FF6A1FB009241CF /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		4389AC281FEE2334006C53AC /* RidesShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RidesShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4389AC2B1FEE2334006C53AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4389AC2D1FEE2334006C53AC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				4389AC2D1FEE2334006C53AC /* HomeVC.swift */,
 				4389AC4A1FF400C0006C53AC /* LeftSidePanelVC.swift */,
 				4389AC4C1FF40137006C53AC /* ContainerVC.swift */,
+				435FAE6E1FF69C8E009241CF /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				4389AC441FF174EB006C53AC /* RoundShadow.swift */,
 				4389AC461FF1768E006C53AC /* CircleView.swift */,
 				4389AC481FF2AA2A006C53AC /* RoundshadowanimButton.swift */,
+				435FAE701FF6A1FB009241CF /* RoundedCornerTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 			files = (
 				4389AC501FF404E7006C53AC /* CenterVCDelegate.swift in Sources */,
 				4389AC491FF2AA2A006C53AC /* RoundshadowanimButton.swift in Sources */,
+				435FAE6F1FF69C8E009241CF /* LoginVC.swift in Sources */,
 				4389AC4B1FF400C0006C53AC /* LeftSidePanelVC.swift in Sources */,
 				4389AC471FF1768E006C53AC /* CircleView.swift in Sources */,
 				4389AC4D1FF40137006C53AC /* ContainerVC.swift in Sources */,
@@ -301,6 +308,7 @@
 				4389AC451FF174EB006C53AC /* RoundShadow.swift in Sources */,
 				4389AC2C1FEE2334006C53AC /* AppDelegate.swift in Sources */,
 				4389AC431FF173DB006C53AC /* RoundImage.swift in Sources */,
+				435FAE711FF6A1FB009241CF /* RoundedCornerTextField.swift in Sources */,
 				4389AC531FF55E2A006C53AC /* UIViewEXT.swift in Sources */,
 				4389AC411FEEC318006C53AC /* GradientView.swift in Sources */,
 			);

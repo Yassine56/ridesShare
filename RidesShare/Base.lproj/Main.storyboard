@@ -280,6 +280,9 @@
                                 <state key="normal" title="Sign up/ Login">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupLoginWasPressed:" destination="wlX-cJ-Csz" eventType="touchUpInside" id="8jo-fy-OCa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,9 +302,143 @@
             </objects>
             <point key="canvasLocation" x="914.39999999999998" y="112.89355322338831"/>
         </scene>
+        <!--LoginVC-->
+        <scene sceneID="OWN-50-Sf1">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="Eaj-on-UAN" customClass="LoginVC" customModule="RidesShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zas-Au-dgx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-k5-Vz4">
+                                <rect key="frame" x="0.0" y="0.0" width="759" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rib-89-O8w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tds-ta-1NS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csa-qP-CjQ">
+                                            <rect key="frame" x="20" y="30" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="cancelBtn"/>
+                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="72j-KI-Srg">
+                                            <rect key="frame" x="12.5" y="198.5" width="350" height="270"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-og-k2A">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="122"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="center" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yzn-Rq-des">
+                                                            <rect key="frame" x="64.5" y="0.0" width="221" height="48"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RIDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsr-QT-JAi">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="48"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.33585979059999999" blue="0.072036218580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMe-Yh-bUr">
+                                                                    <rect key="frame" x="103.5" y="0.0" width="117.5" height="48"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up or loging to start requesting rides on RidesShare the easiest way to get a lift anywhere" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6s-G0-pVW">
+                                                            <rect key="frame" x="0.0" y="48" width="350" height="74"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="350" id="6PH-B1-xZr"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="p5X-is-vK8"/>
+                                                        <constraint firstAttribute="height" constant="122" id="qz1-3l-3O0"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oKI-vW-d4b">
+                                                    <rect key="frame" x="0.0" y="142" width="350" height="29"/>
+                                                    <segments>
+                                                        <segment title="Passenger"/>
+                                                        <segment title="Driver"/>
+                                                    </segments>
+                                                    <color key="tintColor" red="0.91945594549179077" green="0.32180643081665039" blue="0.20096820592880249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </segmentedControl>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2k-Cj-YNK" customClass="RoundedCornerTextField" customModule="RidesShare" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="190" width="350" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVz-Mc-h5f" customClass="RoundedCornerTextField" customModule="RidesShare" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="240" width="350" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvn-0P-rYB">
+                                            <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-0j-VqX" customClass="RoundshadowanimButton" customModule="RidesShare" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="j69-SM-naA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                                    <state key="normal" title="Sign up / Login">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="K0h-jq-uqu"/>
+                                                <constraint firstItem="RXC-0j-VqX" firstAttribute="leading" secondItem="bvn-0P-rYB" secondAttribute="leading" id="cw1-eC-QY7"/>
+                                                <constraint firstAttribute="bottom" secondItem="RXC-0j-VqX" secondAttribute="bottom" id="pSM-K6-mhq"/>
+                                                <constraint firstAttribute="trailing" secondItem="RXC-0j-VqX" secondAttribute="trailing" id="qdC-Qy-Jpx"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bvn-0P-rYB" secondAttribute="bottom" constant="20" id="Nok-8L-qZQ"/>
+                                        <constraint firstItem="72j-KI-Srg" firstAttribute="centerY" secondItem="Tds-ta-1NS" secondAttribute="centerY" id="Pop-9H-txV"/>
+                                        <constraint firstAttribute="trailing" secondItem="bvn-0P-rYB" secondAttribute="trailing" constant="20" id="op2-FJ-Hjv"/>
+                                        <constraint firstItem="bvn-0P-rYB" firstAttribute="leading" secondItem="Tds-ta-1NS" secondAttribute="leading" constant="20" id="sY6-7S-8pa"/>
+                                        <constraint firstItem="72j-KI-Srg" firstAttribute="centerX" secondItem="Tds-ta-1NS" secondAttribute="centerX" id="ymL-kq-b8Y"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rib-89-O8w" firstAttribute="bottom" secondItem="bRg-ZR-cAw" secondAttribute="bottom" id="I0V-g7-Ja3"/>
+                            <constraint firstItem="rib-89-O8w" firstAttribute="top" secondItem="zas-Au-dgx" secondAttribute="top" id="NPQ-nJ-MZj"/>
+                            <constraint firstItem="rib-89-O8w" firstAttribute="leading" secondItem="bRg-ZR-cAw" secondAttribute="leading" id="gQT-jN-lVz"/>
+                            <constraint firstAttribute="trailing" secondItem="rib-89-O8w" secondAttribute="trailing" id="uGP-FX-kCu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bRg-ZR-cAw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tff-Wz-AbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.8" y="112.89355322338831"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="cancelBtn" width="32" height="31"/>
         <image name="centerMapBtn" width="62" height="62"/>
+        <image name="loginBackground" width="759" height="500"/>
         <image name="menuSliderBtn" width="30" height="24"/>
         <image name="sample-photo2" width="1242" height="2208"/>
     </resources>

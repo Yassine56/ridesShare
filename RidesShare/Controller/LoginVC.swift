@@ -1,17 +1,19 @@
 //
-//  LeftSidePanelVC.swift
+//  LoginVC.swift
 //  RidesShare
 //
-//  Created by Abouelouafa Yassine on 12/27/17.
+//  Created by Abouelouafa Yassine on 12/29/17.
 //  Copyright © 2017 Abouelouafa Yassine. All rights reserved.
 //
 
 import UIKit
 
-class LeftSidePanelVC: UIViewController {
+class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bindToKeyBoard()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -22,11 +24,6 @@ class LeftSidePanelVC: UIViewController {
     }
     
 
-    @IBAction func signupLoginWasPressed(_ sender: Any) {
-        let UIstoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let loginVC = UIstoryboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
-        present(loginVC!, animated: true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 
