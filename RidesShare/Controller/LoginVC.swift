@@ -14,13 +14,17 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         view.bindToKeyBoard()
         
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard(tapgesturereco:)))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func dismissKeyBoard(tapgesturereco: UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
+   
+    @IBAction func cancelButtonWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 

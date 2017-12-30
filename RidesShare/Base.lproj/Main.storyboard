@@ -324,6 +324,9 @@
                                             <rect key="frame" x="20" y="30" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="cancelBtn"/>
+                                            <connections>
+                                                <action selector="cancelButtonWasPressed:" destination="Eaj-on-UAN" eventType="touchUpInside" id="s7o-V0-nY1"/>
+                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="72j-KI-Srg">
                                             <rect key="frame" x="12.5" y="198.5" width="350" height="270"/>

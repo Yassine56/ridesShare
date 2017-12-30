@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RevealingSplashView
+
 
 class HomeVC: UIViewController {
 
@@ -26,6 +28,11 @@ class HomeVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let splashview = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
+        splashview.animationType = .heartBeat
+        splashview.startAnimation()
+        
+        splashview.heartAttack = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
