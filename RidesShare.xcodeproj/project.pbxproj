@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4306F1131FFBF0D300DF6F04 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4306F1121FFBF0D300DF6F04 /* DataService.swift */; };
 		435FAE6F1FF69C8E009241CF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435FAE6E1FF69C8E009241CF /* LoginVC.swift */; };
 		435FAE711FF6A1FB009241CF /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435FAE701FF6A1FB009241CF /* RoundedCornerTextField.swift */; };
 		435FAE731FF7F158009241CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 435FAE721FF7F157009241CF /* GoogleService-Info.plist */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4306F1121FFBF0D300DF6F04 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		435FAE6E1FF69C8E009241CF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		435FAE701FF6A1FB009241CF /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		435FAE721FF7F157009241CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4306F10F1FFBE3E500DF6F04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4306F1121FFBF0D300DF6F04 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4389AC1F1FEE2333006C53AC = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		4389AC2A1FEE2334006C53AC /* RidesShare */ = {
 			isa = PBXGroup;
 			children = (
+				4306F10F1FFBE3E500DF6F04 /* Services */,
 				4389AC511FF55E15006C53AC /* Extension */,
 				4389AC4E1FF404CA006C53AC /* Protocols */,
 				4389AC3F1FEEC2BD006C53AC /* Model */,
@@ -303,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4389AC501FF404E7006C53AC /* CenterVCDelegate.swift in Sources */,
+				4306F1131FFBF0D300DF6F04 /* DataService.swift in Sources */,
 				4389AC491FF2AA2A006C53AC /* RoundshadowanimButton.swift in Sources */,
 				435FAE6F1FF69C8E009241CF /* LoginVC.swift in Sources */,
 				4389AC4B1FF400C0006C53AC /* LeftSidePanelVC.swift in Sources */,

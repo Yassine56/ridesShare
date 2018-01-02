@@ -384,7 +384,7 @@
                                                     <rect key="frame" x="0.0" y="240" width="350" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                         </stackView>
@@ -401,6 +401,9 @@
                                                     <state key="normal" title="Sign up / Login">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="authbtnWasPressed:" destination="Eaj-on-UAN" eventType="touchUpInside" id="odf-CI-nn3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -432,6 +435,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bRg-ZR-cAw"/>
                     </view>
+                    <connections>
+                        <outlet property="authBtn" destination="RXC-0j-VqX" id="Vp0-1X-bS3"/>
+                        <outlet property="emailTextFiel" destination="f2k-Cj-YNK" id="RFd-zM-uF6"/>
+                        <outlet property="passwordTextField" destination="NVz-Mc-h5f" id="8Jb-ku-gkV"/>
+                        <outlet property="segmtedControl" destination="oKI-vW-d4b" id="yaV-8O-NJ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tff-Wz-AbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
