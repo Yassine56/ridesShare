@@ -280,6 +280,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFj-Vb-NFb">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchPickupModePressed:" destination="wlX-cJ-Csz" eventType="valueChanged" id="Soj-0m-yUk"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup Mode Enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbB-o2-Cr3">
                                                 <rect key="frame" x="0.0" y="36" width="173.5" height="23.5"/>
@@ -344,6 +347,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NlK-5N-8Bl"/>
                     </view>
+                    <connections>
+                        <outlet property="accountTypeLabel" destination="tOL-Q5-Ubd" id="ctF-eY-MTJ"/>
+                        <outlet property="emailLabel" destination="IF5-lH-6a2" id="O9b-tD-N1M"/>
+                        <outlet property="pickUpModeLabel" destination="zbB-o2-Cr3" id="JBk-6l-D5k"/>
+                        <outlet property="pickUpSwitch" destination="PFj-Vb-NFb" id="qwv-Ax-MRF"/>
+                        <outlet property="profileImage" destination="N0F-he-I3b" id="eMz-uT-Zza"/>
+                        <outlet property="signupLoginLabel" destination="dlb-vC-x5D" id="taM-wa-kje"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRp-GX-tdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
