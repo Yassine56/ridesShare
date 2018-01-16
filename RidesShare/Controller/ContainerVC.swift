@@ -85,6 +85,7 @@ extension ContainerVC:CenterVCdelegate {
             animateStatusBar()
             setupWhiteCoverView()
             animateCenterPanelXPosition(targetPosition: centerController.view.frame.width - centerPannelExpandedOffSet)
+            self.currentState = .leftPanelExpanded
         }else{
             ishidden = !ishidden
             animateStatusBar()
