@@ -80,6 +80,9 @@
                                     <constraint firstAttribute="height" constant="60" id="kJs-73-gSe"/>
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
+                                <connections>
+                                    <action selector="centerButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9y-1Z-5uD"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA9-vG-X2v">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
@@ -205,6 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="actionbutton" destination="i9M-Rw-YOW" id="Blt-FB-HdH"/>
+                        <outlet property="mapview" destination="Q46-bd-pWS" id="jpP-CX-LeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

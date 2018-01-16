@@ -73,14 +73,14 @@ class ContainerVC: UIViewController {
 
 extension ContainerVC:CenterVCdelegate {
     func toggleLeftPanel() {
-        let notAlreadyExpanded = (currentState !=  .leftPanelExpanded)
+        let notAlreadyExpanded = (currentState != .leftPanelExpanded)
         if notAlreadyExpanded {
             addLeftPanelViewController()
         }
         animateLeftPanel(shouldExpand: notAlreadyExpanded)
     }
     @objc func animateLeftPanel(shouldExpand: Bool) {
-        if shouldExpand {
+        if shouldExpand == true{
             ishidden = !ishidden
             animateStatusBar()
             setupWhiteCoverView()

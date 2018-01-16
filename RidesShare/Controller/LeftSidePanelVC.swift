@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 class LeftSidePanelVC: UIViewController {
+    
+    var delegate: CenterVCdelegate?
 
     var appDelegate = AppDelegate.getAppDelegate()
     @IBOutlet var pickUpSwitch: UISwitch!
