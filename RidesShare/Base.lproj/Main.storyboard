@@ -208,6 +208,8 @@
                     </view>
                     <connections>
                         <outlet property="actionbutton" destination="i9M-Rw-YOW" id="Blt-FB-HdH"/>
+                        <outlet property="centerbtnoutlet" destination="OoV-xq-Wqi" id="Fe6-Ei-0vW"/>
+                        <outlet property="destinationTextField" destination="vc2-wG-2Wi" id="e1q-dV-sa4"/>
                         <outlet property="mapview" destination="Q46-bd-pWS" id="jpP-CX-LeG"/>
                     </connections>
                 </viewController>
