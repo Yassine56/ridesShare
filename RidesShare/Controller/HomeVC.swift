@@ -14,14 +14,17 @@ import Firebase
 
 class HomeVC: UIViewController,MKMapViewDelegate {
 
+    @IBOutlet var destinationCircle: CircleView!
     @IBOutlet var destinationTextField: UITextField!
     @IBOutlet var centerbtnoutlet: UIButton!
     @IBOutlet var mapview: MKMapView!
     @IBOutlet var actionbutton: RoundshadowanimButton!
+    var searchResults = [MKMapItem]()
     var delegate: CenterVCdelegate?
     var manager: CLLocationManager?
     var regionRedius: CLLocationDistance = 1000
     var tableView = UITableView()
+    let currentUserId = "4"  // Auth.auth().currentUser?.uid check auth first
     
     func checkLocationAuthStatus(){
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
@@ -136,13 +139,43 @@ class HomeVC: UIViewController,MKMapViewDelegate {
             view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.image = UIImage(named: "driverAnnotation")
             return view
-        }else{
+        }else if let annotation = annotation as? PassengerAnnotation {
+            let identifier = "Passenger"
+            var view: MKAnnotationView
+            view = MKAnnotationView(annotation: annotation, reuseIdentifier: "passengerAnnotation")
+            view.image = UIImage(named: "currentLocationAnnotation")
+            return view
+        }
+        else{
         return nil
         }
     }
 
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         centerbtnoutlet.fadeTo(alphaValue: 1.0, duration: 0.2)
+    }
+    
+    func performSearch(){
+        searchResults.removeAll()
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = destinationTextField.text
+        request.region = mapview.region
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                if response?.mapItems.count == 0 {
+                    print("no result")
+                } else {
+                    for item in response!.mapItems {
+                        self.searchResults.append(item)
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    
     }
 }
 extension HomeVC: CLLocationManagerDelegate {
@@ -167,20 +200,35 @@ extension HomeVC: UITextFieldDelegate {
             tableView.rowHeight = 60
             view.addSubview(tableView)
             animatetableview(shouldShow: true)
+            UIView.animate(withDuration: 0.2, animations: {
+                 self.destinationCircle.backgroundColor = UIColor.red
+                self.destinationCircle.borderColor = UIColor.init(red: 199/255, green: 0, blue: 0, alpha: 1)
+            })
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == destinationTextField {
-            // performserach()
+            performSearch()
             view.endEditing(true)
         }
         return true
     }
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        searchResults.removeAll()
+        tableView.reloadData()
+        centerMapOnUserLocation()
+        
         return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        if textField == destinationTextField {
+            if destinationTextField.text == "" {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.destinationCircle.backgroundColor = UIColor.lightGray
+                    self.destinationCircle.borderColor = UIColor.darkGray
+                })
+            }
+        }
     }
     func animatetableview(shouldShow: Bool){
         if shouldShow {
@@ -205,18 +253,37 @@ extension HomeVC: UITextFieldDelegate {
 
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if destinationTextField.text == "" {
+            view.endEditing(true)
+            animatetableview(shouldShow: false)
+
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "LocationCell")
+        let mapitem = searchResults[indexPath.row]
+         cell.textLabel?.text = mapitem.name
+        cell.detailTextLabel?.text = mapitem.placemark.title
+        return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return searchResults.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let passengerCoordinate = manager?.location?.coordinate
+        let passengerAnnotation = PassengerAnnotation(coordinate: passengerCoordinate!, withkey: currentUserId)
+        mapview.addAnnotation(passengerAnnotation)
+        
+        animatetableview(shouldShow: false)
         print("row selected")
     }
 }
